@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+// import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import {DataService} from './data.service';
@@ -17,8 +18,9 @@ import {DataService} from './data.service';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
-    AngularFireAuthModule, // auth
-    AngularFireStorageModule // storage
+    // AngularFireAuthModule, // auth
+    // AngularFireStorageModule // storage
+    AngularFireFunctionsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
